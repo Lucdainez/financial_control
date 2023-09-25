@@ -1,36 +1,34 @@
-import { StaticImageData } from "next/image";
 import { createContext } from "react";
+import { paymentMethodEnum } from "@/Enums";
 
 export interface ContextFinancialProps {
   editFinancial: {
-    title: string,
-    // srcImage: {
-    //   blurDataURL: string;
-    //   blurHeight: number;
-    //   blurWidth: number;
-    //   height: number;
-    //   src: string;
-    //   width: number;
-    // };
-    srcImage: string,
-    link: string,
-    category: string,
-    plataform: string,
+    totalSalary: number,
+    totalExpenses: number,
+    totalPurchases: number,
+    workedDays: number,
+    halfDayWorked: number,
+    productPurchased: string,
+    amountPaid: number,
+    paymentMethod: paymentMethodEnum,
+    accountName: string,
+    accountValue: number,
+    paidStatusOrNot: boolean,
+    dueDate: Date,
   };
   setEditFinancial: React.Dispatch<React.SetStateAction<{
-    title: string,
-    // srcImage: {
-    //   blurDataURL: string;
-    //   blurHeight: number;
-    //   blurWidth: number;
-    //   height: number;
-    //   src: string;
-    //   width: number;
-    // };
-    srcImage: string,
-    link: string,
-    category: string,
-    plataform: string,
+    totalSalary: number,
+    totalExpenses: number,
+    totalPurchases: number,
+    workedDays: number,
+    halfDayWorked: number,
+    productPurchased: string,
+    amountPaid: number,
+    paymentMethod: paymentMethodEnum,
+    accountName: string,
+    accountValue: number,
+    paidStatusOrNot: boolean,
+    dueDate: Date,
   }>>
 }
 
